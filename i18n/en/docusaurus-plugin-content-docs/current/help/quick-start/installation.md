@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: Getting Started with Memfit
+description: Quick start with Memfit AI — environment setup, installation on macOS/Linux/Windows, and first run. Get going with Yaklang's official AI Agent framework in minutes.
+keywords: [install Memfit, quick start, macOS, Linux, Windows, Yaklang]
 ---
 
 # Getting Started with Memfit

@@ -1,0 +1,20 @@
+# Memfit AI
+
+> Memfit AI 是 Yaklang 生态的开源网络安全 AI Agent 编排框架，采用递归式双引擎（ReAct+Plan）架构，让 AI 拥有看得见的行动力。提供记忆/RAG、工具/Forges、自旋检测等能力，面向安全自动化与代码审计场景。
+
+## 技术架构
+
+- [概览](https://memfit.ai/docs/product/overview): 什么是 Memfit AI、核心能力与设计目标
+- [核心架构：递归式双引擎](https://memfit.ai/docs/product/architecture/recursive-dual-engine): ReAct+Plan 递归式双引擎的工作原理与栈结构
+- [协调器](https://memfit.ai/docs/product/features/coordinator): 任务调度与多 Agent 协调机制
+
+## 使用手册
+
+- [认识与安装 Memfit](https://memfit.ai/docs/help/quick-start/installation): 快速开始、环境准备与安装
+- [Agent 使用教程](https://memfit.ai/docs/help/tutorials/ai-agent): 完整的 AI Agent 上手教程
+
+## 链接
+
+- 官网: https://memfit.ai
+- GitHub: https://github.com/yaklang/memfit-home
+- Yaklang 生态: https://yaklang.com

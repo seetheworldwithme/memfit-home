@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: Overview
+description: Memfit AI is Yaklang's official open-source cybersecurity AI Agent orchestration framework, built on a recursive dual-engine (ReAct + Plan) architecture for security automation and code auditing.
+keywords: [Memfit AI, AI Agent, cybersecurity, security automation, Yaklang, ReAct, recursive dual-engine]
 ---
 
 # Memfit AI Overview

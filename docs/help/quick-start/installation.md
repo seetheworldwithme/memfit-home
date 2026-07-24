@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: 认识与安装 Memfit
+description: Memfit AI 快速开始：环境准备、macOS/Linux/Windows 安装步骤与首次运行，几分钟上手 Yaklang 官方 AI Agent 框架。
+keywords: [安装 Memfit, 快速开始, macOS, Linux, Windows, Yaklang]
 ---
 
 # 认识与安装 Memfit

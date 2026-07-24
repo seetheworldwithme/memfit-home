@@ -9,6 +9,8 @@
 import { useEffect, useState, useCallback, type ReactNode } from "react";
 import { useLocation } from "@docusaurus/router";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import { PageMetadata } from "@docusaurus/theme-common";
+import Head from "@docusaurus/Head";
 import { CONTENT, type Locale } from "./locales";
 import { ThemeContext, type Theme } from "./context/ThemeContext";
 import {
@@ -66,8 +68,65 @@ export const NewHome = (): ReactNode => {
 
   const content = CONTENT[locale];
 
+  // 首页结构化数据：Organization + SoftwareApplication，提升 AI 实体识别与可发现性
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Memfit AI",
+    url: "https://memfit.ai",
+    logo: "https://memfit.ai/img/logo.png",
+    description:
+      "Yaklang 生态的开源网络安全 AI Agent 编排框架，递归式双引擎（ReAct+Plan）让 AI 拥有看得见的行动力。",
+    sameAs: [
+      "https://github.com/yaklang/memfit-home",
+      "https://yaklang.com",
+    ],
+  };
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Memfit AI",
+    applicationCategory: "DeveloperApplication",
+    operatingSystem: "Cross-platform",
+    url: "https://memfit.ai",
+    downloadUrl: "https://memfit.ai/downloads",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+  };
+  // WebSite 实体（SearchAction 需搜索后端，本站暂未启用搜索，故暂不配置）
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Memfit AI",
+    url: "https://memfit.ai",
+    inLanguage: ["zh-CN", "en-US"],
+    publisher: {
+      "@type": "Organization",
+      name: "Memfit AI",
+      url: "https://memfit.ai",
+    },
+  };
+
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <PageMetadata
+        title="Memfit AI — Yaklang 生态开源网络安全 AI Agent 编排框架"
+        description="Memfit AI 是 Yaklang 生态的开源网络安全 AI Agent 编排框架，采用递归式双引擎（ReAct+Plan）架构，让 AI 拥有看得见的行动力。提供记忆/RAG、工具/Forges、自旋检测等能力，面向安全自动化与代码审计场景。"
+      />
+      <Head>
+        <script type="application/ld+json">
+          {JSON.stringify(organizationSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(softwareSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(websiteSchema)}
+        </script>
+      </Head>
       <Header locale={locale} onToggleLocale={handleToggleLocale} />
       <div className={`${theme === "light" ? "bg-white theme-light" : "bg-[#171717] theme-dark"}`}>
         <main className="pt-[72px] desktop:pt-[56px] overflow-x-hidden">

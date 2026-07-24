@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: 协调器
+description: Memfit AI 协调器：负责任务调度与多 Agent 协作，编排递归式双引擎的执行流程与上下文管理。
+keywords: [协调器, 任务调度, 多 Agent 协作, Memfit AI]
 ---
 
 # 协调器 (Coordinator)

@@ -16,15 +16,14 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://memfit.ai',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'yaklang', // Usually your GitHub org/user name.
+  projectName: 'memfit-home', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -61,7 +60,10 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/yaklang/memfit-home/tree/main/docs/',
+          // 展示文档最后更新时间与作者（基于 git 历史，用于内容新鲜度 E-E-A-T）
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
         },
         blog: false,
         theme: {
@@ -73,7 +75,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/memfit-ai-concept.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -173,6 +175,18 @@ const config: Config = {
         {
           title: '更多',
           items: [
+            {
+              label: '关于',
+              to: '/about',
+            },
+            {
+              label: '隐私政策',
+              to: '/privacy-policy',
+            },
+            {
+              label: '使用条款',
+              to: '/terms',
+            },
             {
               label: 'GitHub',
               href: 'https://github.com/yaklang/memfit-home',

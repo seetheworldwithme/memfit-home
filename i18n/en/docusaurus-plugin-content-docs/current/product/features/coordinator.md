@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: Coordinator
+description: The Memfit AI Coordinator handles task scheduling and multi-agent collaboration, orchestrating the execution flow and context management of the recursive dual-engine.
+keywords: [coordinator, task scheduling, multi-agent collaboration, Memfit AI]
 ---
 
 # Coordinator

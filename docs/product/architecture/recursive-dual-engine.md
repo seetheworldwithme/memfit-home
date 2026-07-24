@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: 核心架构：递归式双引擎架构
+description: 详解 Memfit AI 的递归式双引擎架构：ReAct 引擎实时推理与行动，Plan 引擎任务分解与规划，二者递归协作完成复杂安全任务。
+keywords: [递归式双引擎, ReAct 引擎, Plan 引擎, Agent 架构, Memfit AI]
 ---
 
 # 递归式双引擎架构
