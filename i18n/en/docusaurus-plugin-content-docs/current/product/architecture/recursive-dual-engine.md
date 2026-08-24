@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: Core Architecture - Recursive Dual-Engine
+description: "Deep dive into Memfit AI's recursive dual-engine architecture: a ReAct engine for real-time reasoning and action, and a Plan engine for task decomposition, working recursively together."
+keywords: [recursive dual-engine, ReAct engine, Plan engine, agent architecture, Memfit AI]
 ---
 
 # Recursive Dual-Engine Architecture

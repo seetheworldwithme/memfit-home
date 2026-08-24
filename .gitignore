@@ -71,3 +71,7 @@ gen
 common/xlic/*.gzip
 .go-version
 .gocache
+# GEO skill (project-local, installed via .claude/scripts/install-geo-skill.sh)
+.claude/skills/geo/.venv/
+**/__pycache__/
+.claude/settings.local.json

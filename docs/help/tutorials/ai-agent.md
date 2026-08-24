@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: Agent 使用教程
+description: Memfit AI Agent 完整上手教程：从创建 Agent、配置工具与技能，到执行安全任务的端到端实战示例。
+keywords: [Agent 教程, 使用指南, 工具配置, Memfit AI]
 ---
 
 # Agent 使用教程

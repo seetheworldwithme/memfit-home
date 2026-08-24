@@ -16,7 +16,7 @@ export default function CustomHead() {
       {/* 预加载首屏背景图 - Hero Section */}
       <link
         rel="preload"
-        href="/newImg/header-bg.png"
+        href="/newImg/header-bg.webp"
         as="image"
       />
 

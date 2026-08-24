@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 title: ReAct Loop
+description: The Memfit AI ReAct loop engine alternates reasoning and action, responding in real time to environmental feedback to complete security tasks.
+keywords: [ReAct loop, reasoning and action, Memfit AI, agent engine]
 ---
 
 # ReAct Loop

@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: 安全审计
+description: Memfit AI 在安全审计场景的应用：自动化漏洞检测、代码审计与风险分析，提升安全团队的审计效率。
+keywords: [安全审计, 漏洞检测, 代码审计, 风险分析, Memfit AI]
 ---
 
 # 安全审计使用场景

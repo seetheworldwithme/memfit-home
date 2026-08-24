@@ -3,6 +3,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import DownloadIcon from '@site/src/components/DownloadIcon';
+import Head from '@docusaurus/Head';
 import styles from './downloads.module.css';
 
 const OSS_BASE_URL = 'https://oss-qn.yaklang.com';
@@ -53,7 +54,7 @@ const TRANSLATIONS = {
 };
 
 export default function DownloadsPage(): ReactNode {
-  const {i18n, siteConfig} = useDocusaurusContext();
+  const {i18n} = useDocusaurusContext();
   const locale = i18n.currentLocale as 'en' | 'zh-Hans';
   const t = TRANSLATIONS[locale] || TRANSLATIONS.en;
   
@@ -92,11 +93,45 @@ export default function DownloadsPage(): ReactNode {
     return `${OSS_BASE_URL}/memfit/${version}/MemfitAI-${version}-${item.platform}-${item.arch}.${item.extension}`;
   };
 
+  // 下载页结构化数据：SoftwareApplication + Offer（GEO：Bing/AI 平台对该页此前 0 schema）
+  const canonicalUrl = `https://memfit.ai${locale === 'en' ? '/en' : ''}/downloads/`;
+  const downloadSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Memfit AI',
+    applicationCategory: 'DeveloperApplication',
+    operatingSystem: 'macOS, Windows, Linux',
+    image: 'https://memfit.ai/img/memfit-ai-concept.jpg',
+    url: canonicalUrl,
+    downloadUrl: canonicalUrl,
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+    },
+  };
+
   return (
     <Layout
-      title={`${t.title} - ${siteConfig.title}`}
-      description={`${t.title} - ${siteConfig.tagline}`}>
+      title={t.title}
+      description={
+        locale === 'zh-Hans'
+          ? '下载 Memfit AI 客户端：macOS（Apple Silicon/Intel）、Windows 与 Linux 安装包（.dmg/.exe/.AppImage），免费开源，含当前版本号。'
+          : 'Download the Memfit AI client for macOS (Apple Silicon/Intel), Windows, and Linux (.dmg/.exe/.AppImage). Free and open source, with the current version.'
+      }>
+      <Head>
+        <script type="application/ld+json">
+          {JSON.stringify(downloadSchema)}
+        </script>
+      </Head>
       <div className={styles.container}>
+        {/* 无 JS / 有限 JS 执行的 AI 爬虫（如 Perplexity）的静态兜底 */}
+        <noscript>
+          {locale === 'zh-Hans'
+            ? 'Memfit AI 客户端支持 macOS（Apple Silicon/Intel）、Windows 与 Linux，提供 .dmg / .exe / .AppImage 安装包，可从本页免费下载。'
+            : 'The Memfit AI client supports macOS (Apple Silicon/Intel), Windows, and Linux, with .dmg / .exe / .AppImage installers available for free download from this page.'}
+        </noscript>
         <div className={styles.header}>
           <Heading as="h1" className={styles.title}>
             {t.title}
