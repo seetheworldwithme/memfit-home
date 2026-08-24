@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: Security Audit
+description: Applying Memfit AI to security audits — automated vulnerability detection, code auditing, and risk analysis that boost security team efficiency.
+keywords: [security audit, vulnerability detection, code auditing, risk analysis, Memfit AI]
 ---
 
 # Security Audit Use Case

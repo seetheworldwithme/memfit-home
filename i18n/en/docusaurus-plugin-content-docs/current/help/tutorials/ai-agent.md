@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: Agent Tutorial
+description: A complete hands-on Memfit AI Agent tutorial — from creating an agent and configuring tools and skills to executing a security task end-to-end.
+keywords: [agent tutorial, usage guide, tool configuration, Memfit AI]
 ---
 
 # Agent Tutorial

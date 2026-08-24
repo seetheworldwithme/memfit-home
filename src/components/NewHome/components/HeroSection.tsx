@@ -25,12 +25,18 @@ export const HeroSection = ({ locale }: HeroSectionProps) => {
 
   return (
     <section className={`relative -mt-[56px] h-[780px] desktop:h-[766px] xl:h-[1152px] flex flex-col overflow-hidden ${theme ==='light'? " bg-[#f8f9fa]": "bg-[#171717]" }`}>
+      {/* 语义化 H1：视觉标题由下方 SVG wordmark 呈现，此处为 SEO/可访问性提供语义锚点 */}
+      <h1 className="sr-only">
+        Memfit AI — {content.hero.slogan}
+      </h1>
       {/* 背景图 - 蓝色渐变条纹背景 - 首屏关键资源，立即加载 */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/newImg/header-bg.png"
-          alt=""
+          src="/newImg/header-bg.webp"
+          alt="Memfit AI 官网首页背景：蓝色渐变条纹科技风格装饰图"
           className="w-full h-full object-cover object-center"
+          width={1600}
+          height={960}
           loading="eager"
           fetchPriority="high"
           decoding="async"

@@ -1,6 +1,6 @@
 import { CONTENT, type Locale } from "../locales";
 import { useTheme } from "../context/ThemeContext";
-import { DotIcon } from "../icons";
+import { DotStrip } from "../icons";
 import { AnimatedTitle } from "./AnimatedTitle";
 import { LazyBackgroundImage } from "@site/src/components/LazyImage";
 
@@ -143,11 +143,7 @@ export const WhatIsSection = ({ locale }: WhatIsSectionProps) => {
           </p>
 
           {/* 点阵 */}
-          <div className="flex overflow-hidden gap-1 mb-6">
-            {Array.from({ length: 40 }).map((_, i) => (
-              <DotIcon key={i} className="flex-shrink-0" />
-            ))}
-          </div>
+          <DotStrip gap={1} className="mb-6" />
 
           {/* 文字内容 */}
           <LazyBackgroundImage
@@ -193,6 +189,8 @@ export const WhatIsSection = ({ locale }: WhatIsSectionProps) => {
                     : "/newImg/whatIs-content-black.png"
                 }
                 alt="Memfit AI Overview"
+                width={1796}
+                height={1280}
                 className="w-full max-w-[380px] h-auto"
                 loading="lazy"
                 decoding="async"
@@ -242,11 +240,7 @@ export const WhatIsSection = ({ locale }: WhatIsSectionProps) => {
           </p>
 
           {/* 点阵 */}
-          <div className="flex overflow-hidden gap-2 mb-8">
-            {Array.from({ length: 60 }).map((_, i) => (
-              <DotIcon key={i} className="flex-shrink-0" />
-            ))}
-          </div>
+          <DotStrip gap={2} className="mb-8" />
 
           {/* 文字内容 */}
           <LazyBackgroundImage
@@ -292,6 +286,8 @@ export const WhatIsSection = ({ locale }: WhatIsSectionProps) => {
                     : "/newImg/whatIs-content-black.png"
                 }
                 alt="Memfit AI Overview"
+                width={1796}
+                height={1280}
                 className="w-full h-auto"
                 loading="lazy"
                 decoding="async"
@@ -344,11 +340,7 @@ export const WhatIsSection = ({ locale }: WhatIsSectionProps) => {
           </div>
 
           {/* 点阵 - 全宽 */}
-          <div className="flex overflow-hidden gap-1 mb-10">
-            {Array.from({ length: 200 }).map((_, i) => (
-              <DotIcon key={i} className="flex-shrink-0" />
-            ))}
-          </div>
+          <DotStrip gap={1} className="mb-10" />
 
           {/* 主内容区：左右两栏 */}
           <LazyBackgroundImage
@@ -455,6 +447,8 @@ export const WhatIsSection = ({ locale }: WhatIsSectionProps) => {
                     : "/newImg/whatIs-content-black.png"
                 }
                 alt="Memfit AI Overview"
+                width={1796}
+                height={1280}
                 className="w-full max-w-[680px] xl:max-w-[870px] h-auto"
                 loading="lazy"
                 decoding="async"

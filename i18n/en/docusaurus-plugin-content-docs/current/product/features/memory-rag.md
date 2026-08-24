@@ -1,6 +1,8 @@
 ---
 sidebar_position: 4
 title: Memory & RAG
+description: "Memfit AI's memory and RAG system: a persistent knowledge base with retrieval-augmented generation so the AI agent remembers context and finds evidence."
+keywords: [memory, RAG, knowledge base, retrieval augmentation, Memfit AI]
 ---
 
 # Memory Triage & RAG System

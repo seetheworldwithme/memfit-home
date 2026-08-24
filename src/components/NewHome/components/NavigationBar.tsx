@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { CONTENT, type Locale, type SectionItem } from "../locales";
 import { useTheme } from "../context/ThemeContext";
-import { DotIcon, BookOpenIcon, BrainIcon, ListTodoIcon, RefreshIcon, WrenchIcon } from "../icons";
+import { DotStrip, BookOpenIcon, BrainIcon, ListTodoIcon, RefreshIcon, WrenchIcon } from "../icons";
 import { AnimatedTitle } from "./AnimatedTitle";
 import { LazyBackgroundImage } from "@site/src/components/LazyImage";
 
@@ -412,11 +412,7 @@ export const NavigationBar = ({ locale, allSections }: NavigationBarProps) => {
           </p>
         </div>
         {/* 点阵 - 全宽 */}
-        <div className="flex overflow-hidden gap-2">
-          {Array.from({ length: 200 }).map((_, i) => (
-            <DotIcon key={i} className="flex-shrink-0" />
-          ))}
-        </div>
+        <DotStrip gap={2} />
       </div>
       {/* PC端布局 - 高度约880px */}
       <div className="hidden desktop:block relative z-10 h-full w-full">
@@ -511,6 +507,8 @@ export const NavigationBar = ({ locale, allSections }: NavigationBarProps) => {
                                 : leftBlackImages[idx]
                             }
                             alt={item.title}
+                            width={301}
+                            height={[301, 301, 301, 301, 306][idx] ?? 301}
                             className="object-contain w-[150px] absolute top-[-75px] right-0 animate-slide-up-fade-left"
                           />
                         ) : null}
@@ -553,6 +551,8 @@ export const NavigationBar = ({ locale, allSections }: NavigationBarProps) => {
                     : `/newImg/content-black-${activeIndex + 1}.png`
                 }
                 alt={sections[activeIndex]?.title || "Section"}
+                width={1840}
+                height={[1256, 1224, 1256, 1256, 1292][activeIndex] ?? 1256}
                 className="smallScreen:h-[680px] h-auto z-10 animate-slide-up-fade-content"
                 loading="lazy"
                 decoding="async"
