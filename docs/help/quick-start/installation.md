@@ -1,27 +1,29 @@
 ---
 sidebar_position: 1
-title: 认识与安装 Memfit
+title: 认识与安装 Memfit AI
+description: Memfit AI 快速开始：环境准备、macOS/Linux/Windows 安装步骤与首次运行，几分钟上手 Yaklang 官方 AI Agent 框架。
+keywords: [安装 Memfit AI, 快速开始, macOS, Linux, Windows, Yaklang]
 ---
 
-# 认识与安装 Memfit
+# 认识与安装 Memfit AI
 
-## 什么是 Memfit
+## 什么是 Memfit AI
 
-Memfit 是一个通用 AI Agent 平台，赋予 AI 真正的行动力。它不只是对话，而是能够理解任务、制定计划、调用工具并交付结果的智能体系统。
+Memfit AI 是一个通用 AI Agent 平台，赋予 AI 真正的行动力。它不只是对话，而是能够理解任务、制定计划、调用工具并交付结果的智能体系统。
 
-Memfit 针对网络安全、代码审计等专业工业场景进行了深度优化，同时保持了通用 Agent 的灵活性，能够适应各类复杂任务。
+Memfit AI 针对网络安全、代码审计等专业工业场景进行了深度优化，同时保持了通用 Agent 的灵活性，能够适应各类复杂任务。
 
 ### 三大核心系统
 
 | 系统 | 说明 |
 |------|------|
-| **AI Agent 执行引擎** | Memfit 的核心驱动力。通过 ReAct 循环和任务规划，让 AI 能够自主思考、调用工具、执行多步骤任务 |
+| **AI Agent 执行引擎** | Memfit AI 的核心驱动力。通过 ReAct 循环和任务规划，让 AI 能够自主思考、调用工具、执行多步骤任务 |
 | **知识库系统** | 为 AI 提供领域专业知识。支持导入自定义知识数据，让 AI 在特定领域中具备专家级理解 |
 | **记忆库系统** | AI 的长期记忆能力。记录交互历史和学习成果，让 AI 越用越聪明，越来越理解你的需求 |
 
 ### 适用场景
 
-Memfit 在以下场景中表现出色：
+Memfit AI 在以下场景中表现出色：
 
 - **网络安全**: 漏洞扫描、渗透测试、安全审计
 - **代码审计**: 代码质量分析、安全缺陷检测
@@ -31,17 +33,17 @@ Memfit 在以下场景中表现出色：
 
 ## 开源与产品更新
 
-Memfit 基于 [Yaklang](https://github.com/yaklang/yaklang) 开源引擎构建。Yaklang 是一个活跃维护的开源项目，提供了强大的安全工具链和 DSL 能力。
+Memfit AI 基于 [Yaklang](https://github.com/yaklang/yaklang) 开源引擎构建。Yaklang 是一个活跃维护的开源项目，提供了强大的安全工具链和 DSL 能力。
 
 - **引擎开源**: Yaklang 引擎完全开源，社区驱动
-- **持续更新**: Memfit 客户端和 Yaklang 引擎均保持活跃更新，不断引入新功能和优化
+- **持续更新**: Memfit AI 客户端和 Yaklang 引擎均保持活跃更新，不断引入新功能和优化
 - **生态丰富**: 内置大量安全工具、协议支持和分析能力
 
-## 下载与安装 Memfit
+## 下载与安装 Memfit AI
 
-### 获取 Memfit
+### 获取 Memfit AI
 
-访问 Memfit 官方网站，下载适合您操作系统的安装包。
+访问 Memfit AI 官方网站，下载适合您操作系统的安装包。
 
 ![image-20260316123157042](/img/help/image-20260316123157042.png)
 
@@ -58,25 +60,25 @@ Memfit 基于 [Yaklang](https://github.com/yaklang/yaklang) 开源引擎构建�
 
 1. 从官网下载对应平台的安装包
 2. 运行安装程序，按照提示完成安装
-3. 启动 Memfit
+3. 启动 Memfit AI
 
 ### 首次启动
 
-首次启动 Memfit 时，系统会自动进行初始化，包括检查运行环境和配置基础设置。
+首次启动 Memfit AI 时，系统会自动进行初始化，包括检查运行环境和配置基础设置。
 
 ![image-20260316123236292](/img/help/image-20260316123236292.png)
 
 ## Yaklang 引擎
 
-Memfit 使用 Yaklang 引擎作为底层运行时，负责执行工具调用、安全扫描、协议交互等核心操作。
+Memfit AI 使用 Yaklang 引擎作为底层运行时，负责执行工具调用、安全扫描、协议交互等核心操作。
 
 ### 引擎管理
 
-在 Memfit 中，您可以方便地管理 Yaklang 引擎：
+在 Memfit AI 中，您可以方便地管理 Yaklang 引擎：
 
-- **自动安装**: 首次启动时，Memfit 会引导您安装 Yaklang 引擎
-- **版本更新**: 当有新版本可用时，Memfit 会提示您更新引擎
-- **状态检查**: 在 Memfit 界面中可以查看引擎的连接状态和版本信息
+- **自动安装**: 首次启动时，Memfit AI 会引导您安装 Yaklang 引擎
+- **版本更新**: 当有新版本可用时，Memfit AI 会提示您更新引擎
+- **状态检查**: 在 Memfit AI 界面中可以查看引擎的连接状态和版本信息
 
 ![image-20260316123300909](/img/help/image-20260316123300909.png)
 

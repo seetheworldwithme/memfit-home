@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
 title: 工具与 Forges
+description: Memfit AI 的工具与 Forges 体系：可扩展的工具调用与 Forge 机制，连接 Yaklang 安全能力与外部系统。
+keywords: [工具调用, Forges, 工具集成, Yaklang, Memfit AI]
 ---
 
 # 工具与 Forges

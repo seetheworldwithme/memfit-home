@@ -1,7 +1,11 @@
 ---
 sidebar_position: 1
 title: Overview
+description: Memfit AI is the open-source cybersecurity AI Agent orchestration framework of the Yaklang ecosystem, built on a recursive dual-engine (ReAct + Plan) architecture for security automation and code auditing.
+keywords: [Memfit AI, AI Agent, cybersecurity, security automation, Yaklang, ReAct, recursive dual-engine]
 ---
+
+import Head from '@docusaurus/Head';
 
 # Memfit AI Overview
 
@@ -28,6 +32,14 @@ Memfit AI solves this by **recursively coupling** these two paradigms. It create
 ## Core Architecture: The 5 Pillars
 
 Memfit AI is built around five key components that work in concert to deliver intelligent security capabilities.
+
+| Pillar | Layer | Problem It Solves | Key Mechanisms |
+|---|---|---|---|
+| **Plan Engine** | Strategic | Complex security tasks cannot be done in a single step | Task tree generation, dependency management, recursive triggering |
+| **ReAct Engine** | Tactical | The real world is non-deterministic | LoopEngine (OODA cycle), spin detection, self-reflection |
+| **Tools & Forges** | Capability | AI models cannot touch the network or file system directly | Atomic tools, scenario-based Forges, Yaklang integration, MCP support |
+| **Knowledge (RAG)** | Knowledge | LLMs lack private or up-to-date domain knowledge | Hybrid indexing (vector + keyword), agentic retrieval |
+| **Memory** | Context | Standard sessions are stateless | C.O.R.E. P.A.C.T. scoring, vector-database persistence |
 
 ![Memfit AI Architecture Pillars](/img/memfit-5-pillars.jpg)
 
@@ -94,3 +106,88 @@ The Memory System acts as an "Intelligent Hippocampus." It doesn't just store lo
 **Technical Architecture:**
 *   **C.O.R.E. P.A.C.T. Framework:** A scoring system to determine which memories are worth keeping (Connectivity, Relevance, Actionability, etc.).
 *   **Vector Database:** Persists high-value memories for long-term recall across sessions.
+
+## FAQ
+
+### What is Memfit AI?
+
+Memfit AI is an open-source cybersecurity AI Agent orchestration framework from the Yaklang ecosystem, built on a recursive dual-engine (ReAct + Plan) architecture for security automation and code auditing.
+
+### How does the recursive dual-engine work?
+
+The Plan Engine handles strategy (task-tree generation), while the ReAct Engine handles tactical execution (Observation-Thought-Action loops). When a subtask becomes too complex, the ReAct Engine recursively triggers a new planning phase.
+
+### Is Memfit AI free and open source?
+
+Yes. Memfit AI is built on the open-source Yaklang engine, and the client can be downloaded for free from the [official downloads page](/downloads).
+
+### Which operating systems does Memfit AI support?
+
+macOS (Intel and Apple Silicon), Windows, and Linux are supported, with `.dmg`, `.exe`, and `.AppImage` installers respectively.
+
+### What is Memfit AI's core architecture?
+
+A five-pillar architecture: Plan Engine (strategic layer), ReAct Engine (tactical layer), Tools & Forges (capability layer), Knowledge/RAG (knowledge layer), and Memory (context layer), working in concert to deliver intelligent security capabilities.
+
+### How is Memfit AI different from a traditional AI chatbot?
+
+A chatbot can only converse; Memfit AI understands tasks, creates plans, invokes tools, and delivers results, with deep optimization for cybersecurity and code auditing scenarios.
+
+<Head>
+  <script type="application/ld+json">{`
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Memfit AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Memfit AI is an open-source cybersecurity AI Agent orchestration framework from the Yaklang ecosystem, built on a recursive dual-engine (ReAct + Plan) architecture for security automation and code auditing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the recursive dual-engine work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Plan Engine handles strategy (task-tree generation), while the ReAct Engine handles tactical execution (Observation-Thought-Action loops). When a subtask becomes too complex, the ReAct Engine recursively triggers a new planning phase."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Memfit AI free and open source?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Memfit AI is built on the open-source Yaklang engine, and the client can be downloaded for free from the official downloads page."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which operating systems does Memfit AI support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "macOS (Intel and Apple Silicon), Windows, and Linux are supported, with .dmg, .exe, and .AppImage installers respectively."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Memfit AI's core architecture?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A five-pillar architecture: Plan Engine (strategic layer), ReAct Engine (tactical layer), Tools & Forges (capability layer), Knowledge/RAG (knowledge layer), and Memory (context layer), working in concert to deliver intelligent security capabilities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Memfit AI different from a traditional AI chatbot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A chatbot can only converse; Memfit AI understands tasks, creates plans, invokes tools, and delivers results, with deep optimization for cybersecurity and code auditing scenarios."
+      }
+    }
+  ]
+}
+`}</script>
+</Head>

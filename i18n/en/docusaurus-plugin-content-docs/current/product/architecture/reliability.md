@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
 title: Agentic Reliability Assurance
+description: Memfit AI's reliability mechanisms — spin detection, memory augmentation, and reflective decision-making — keep the agent stable and controllable across long-running security tasks.
+keywords: [agentic reliability, spin detection, memory augmentation, reflective decision-making, Memfit AI]
 ---
 
 # Reliability Assurance

@@ -1,5 +1,6 @@
 // SVG Icons for NewHome page
 import type { FC } from "react";
+import type { CSSProperties } from "react";
 
 interface IconProps {
   className?: string;
@@ -1015,3 +1016,46 @@ export const EmojiSadIcon: FC<IconProps> = ({ className, stroke }) => (
 );
 
 export type { IconProps };
+
+// ---------------------------------------------------------------------------
+// DotStrip：点阵装饰条。
+// 原实现把 N 个相同的 DotIcon（各 21 个 <rect>）铺成 flex 条，首页因此内联
+// 约 800 个 <svg> / 16000+ 个 <rect>（HTML 1.2MB 的主要来源）。
+// 现改为单个 div + CSS background repeat-x 平铺同一 SVG tile，视觉逐像素等价。
+// gap 对应原 tailwind gap-1 / gap-2（4px / 8px），tile 宽 = 9 + gap*4。
+// ---------------------------------------------------------------------------
+const DOT_PIXELS: ReadonlyArray<readonly [number, number]> = [
+  [2, 0], [5, 0], [8, 0],
+  [0, 2], [3, 2], [6, 2],
+  [2, 4], [5, 4], [8, 4],
+  [0, 6], [3, 6], [6, 6],
+  [2, 8], [5, 8], [8, 8],
+  [0, 10], [3, 10], [6, 10],
+  [2, 12], [5, 12], [8, 12],
+];
+
+function dotStripTileUrl(tileWidth: number): string {
+  const rects = DOT_PIXELS.map(
+    ([x, y]) => `<rect x='${x}' y='${y}' width='1' height='1' fill='#868C97'/>`,
+  ).join('');
+  const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='${tileWidth}' height='13'>${rects}</svg>`;
+  return `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
+}
+
+export const DotStrip: FC<{
+  gap?: 1 | 2;
+  className?: string;
+  style?: CSSProperties;
+}> = ({ gap = 1, className = "", style }) => (
+  <div
+    aria-hidden="true"
+    className={className}
+    style={{
+      height: 13,
+      width: "100%",
+      backgroundImage: dotStripTileUrl(9 + gap * 4),
+      backgroundRepeat: "repeat-x",
+      ...style,
+    }}
+  />
+);
