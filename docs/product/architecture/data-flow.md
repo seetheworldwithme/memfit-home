@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 title: 数据流与人机交互
+description: Memfit AI 的端到端数据流：从用户输入、记忆检索、工具执行到结果回流，以及人机交互与干预机制的设计。
+keywords: [数据流, 人机交互, OODA 循环, Agent 执行, Memfit AI]
 ---
 
 # 数据流与交互控制

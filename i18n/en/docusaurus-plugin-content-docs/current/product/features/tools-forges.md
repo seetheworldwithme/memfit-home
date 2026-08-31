@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
 title: Tools & Forges
+description: "Memfit AI's tools and Forges system: an extensible tool-calling and Forge mechanism that connects Yaklang security capabilities with external systems."
+keywords: [tool calling, Forges, tool integration, Yaklang, Memfit AI]
 ---
 
 # Tools & Forges

@@ -9,6 +9,8 @@
 import { useEffect, useState, useCallback, type ReactNode } from "react";
 import { useLocation } from "@docusaurus/router";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import { PageMetadata } from "@docusaurus/theme-common";
+import Head from "@docusaurus/Head";
 import { CONTENT, type Locale } from "./locales";
 import { ThemeContext, type Theme } from "./context/ThemeContext";
 import {
@@ -66,8 +68,87 @@ export const NewHome = (): ReactNode => {
 
   const content = CONTENT[locale];
 
+  // 按语言输出首页 meta（此前 /en/ 首页 title/description 为中文，en-US hreflang 形同虚设）
+  const isEn = locale === "en";
+  const metaTitle = isEn
+    ? "Open-Source Cybersecurity AI Agent Orchestration Framework | Yaklang Ecosystem"
+    : "Yaklang 生态开源网络安全 AI Agent 编排框架";
+  const metaDescription = isEn
+    ? "Memfit AI is the open-source cybersecurity AI Agent orchestration framework of the Yaklang ecosystem, built on a recursive dual-engine (ReAct + Plan) architecture for security automation and code auditing."
+    : "Memfit AI 是 Yaklang 生态的开源网络安全 AI Agent 编排框架，采用递归式双引擎（ReAct+Plan）架构，让 AI 拥有看得见的行动力。提供记忆/RAG、工具/Forges、自旋检测等能力，面向安全自动化与代码审计场景。";
+  const twitterTitle = `${metaTitle} | Memfit AI`;
+
+  // 首页结构化数据：Organization + SoftwareApplication，提升 AI 实体识别与可发现性
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Memfit AI",
+    url: "https://memfit.ai/",
+    logo: "https://memfit.ai/img/logo.png",
+    description:
+      "Yaklang 生态的开源网络安全 AI Agent 编排框架，递归式双引擎（ReAct+Plan）让 AI 拥有看得见的行动力。",
+    sameAs: [
+      // 组织页是实体身份信号；yaklang.com 属父组织实体，
+      // 父子关系已由 parentOrganization 表达，不再混入自身 sameAs
+      "https://github.com/yaklang",
+    ],
+  };
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Memfit AI",
+    applicationCategory: "DeveloperApplication",
+    operatingSystem: "macOS, Windows, Linux",
+    image: "https://memfit.ai/img/memfit-ai-concept.jpg",
+    url: "https://memfit.ai/",
+    downloadUrl: "https://memfit.ai/downloads/",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    },
+  };
+  // WebSite 实体 + SearchAction（无后端搜索，用 Google site: 站搜模板，合规替代 sitelinks search box）
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Memfit AI",
+    url: "https://memfit.ai",
+    inLanguage: ["zh-CN", "en-US"],
+    publisher: {
+      "@type": "Organization",
+      name: "Memfit AI",
+      url: "https://memfit.ai",
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://www.google.com/search?q=site:memfit.ai+{search_term_string}",
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <PageMetadata title={metaTitle} description={metaDescription} />
+      <Head>
+        <script type="application/ld+json">
+          {JSON.stringify(organizationSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(softwareSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(websiteSchema)}
+        </script>
+        {/* 补齐 og:type 与 twitter 卡片元数据（GEO：AI 平台对 OG/Twitter 完整性的解析信号） */}
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content={twitterTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+      </Head>
       <Header locale={locale} onToggleLocale={handleToggleLocale} />
       <div className={`${theme === "light" ? "bg-white theme-light" : "bg-[#171717] theme-dark"}`}>
         <main className="pt-[72px] desktop:pt-[56px] overflow-x-hidden">

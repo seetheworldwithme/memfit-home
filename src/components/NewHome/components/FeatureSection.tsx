@@ -186,6 +186,8 @@ export const FeatureSection = ({
               <img
                 src={theme === "light" ? `/newImg/content-${index + 1}.png`  : `/newImg/content-black-${index + 1}.png`}
                 alt={section.title}
+                width={1840}
+                height={[1256, 1224, 1256, 1256, 1292][index] ?? 1256}
                 className="w-full h-auto"
                 loading="lazy"
                 decoding="async"
@@ -241,6 +243,8 @@ export const FeatureSection = ({
               <img
                 src={theme === "light" ? `/newImg/content-${index + 1}.png`  : `/newImg/content-black-${index + 1}.png`}
                 alt={section.title}
+                width={1840}
+                height={[1256, 1224, 1256, 1256, 1292][index] ?? 1256}
                 className="w-full h-auto"
                 loading="lazy"
                 decoding="async"

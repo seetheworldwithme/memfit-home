@@ -1,6 +1,6 @@
 import { CONTENT, type Locale } from "../locales";
 import { useTheme } from "../context/ThemeContext";
-import { DotIcon } from "../icons";
+import { DotStrip } from "../icons";
 import { AnimatedTitle } from "./AnimatedTitle";
 import { LazyBackgroundImage } from "@site/src/components/LazyImage";
 
@@ -38,11 +38,7 @@ export const ArchitectureSection = ({ locale }: ArchitectureSectionProps) => {
           </p>
 
           {/* 点阵 */}
-          <div className="flex overflow-hidden gap-1 mb-6">
-            {Array.from({ length: 40 }).map((_, i) => (
-              <DotIcon key={i} className="flex-shrink-0" />
-            ))}
-          </div>
+          <DotStrip gap={1} className="mb-6" />
 
           {/* 架构图 */}
           <LazyBackgroundImage
@@ -64,6 +60,8 @@ export const ArchitectureSection = ({ locale }: ArchitectureSectionProps) => {
                   : "/newImg/architecture-content-black.png"
               }
               alt="Architecture Diagram"
+              width={2546}
+              height={1441}
               className="w-full h-full object-cover"
               loading="lazy"
               decoding="async"
@@ -94,11 +92,7 @@ export const ArchitectureSection = ({ locale }: ArchitectureSectionProps) => {
           </p>
 
           {/* 点阵 */}
-          <div className="flex overflow-hidden gap-2 mb-8">
-            {Array.from({ length: 60 }).map((_, i) => (
-              <DotIcon key={i} className="flex-shrink-0" />
-            ))}
-          </div>
+          <DotStrip gap={2} className="mb-8" />
 
           {/* 架构图 */}
           <LazyBackgroundImage
@@ -120,6 +114,8 @@ export const ArchitectureSection = ({ locale }: ArchitectureSectionProps) => {
                   : "/newImg/architecture-content-black.png"
               }
               alt="Architecture Diagram"
+              width={2546}
+              height={1441}
               className="w-full h-full object-cover"
               loading="lazy"
               decoding="async"
@@ -153,11 +149,7 @@ export const ArchitectureSection = ({ locale }: ArchitectureSectionProps) => {
           </div>
 
           {/* 点阵 - 全宽 */}
-          <div className="flex overflow-hidden gap-1 mb-10">
-            {Array.from({ length: 200 }).map((_, i) => (
-              <DotIcon key={i} className="flex-shrink-0" />
-            ))}
-          </div>
+          <DotStrip gap={1} className="mb-10" />
 
           {/* 架构图 - 居中显示 */}
           <LazyBackgroundImage
@@ -234,6 +226,8 @@ export const ArchitectureSection = ({ locale }: ArchitectureSectionProps) => {
                   : "/newImg/architecture-content-black.png"
               }
               alt="Architecture Diagram"
+              width={2546}
+              height={1441}
               className="w-full h-full object-cover"
               loading="lazy"
               decoding="async"

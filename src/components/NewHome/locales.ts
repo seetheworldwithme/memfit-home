@@ -233,7 +233,7 @@ export const CONTENT: Record<Locale, LocaleContent> = {
     },
     whatIs: {
       title: "什么是 Memfit AI？",
-      description: "Memfit AI 是一个具备战略战术执行，工具系统，知识系统，记忆系统的专业的智能代理平台，由 YAK 技术生态驱动。",
+      description: "Memfit AI 是一个具备战略战术执行，工具系统，知识系统，记忆系统的专业的智能代理平台，由 Yaklang 生态驱动。",
       textOne: "递归式双引擎架构",
       textTwo: "Memfit AI 使用专业的递归式双引擎架构，将 ReAct 动态推理与 Plan-Execute 战略规划深度融合，通过递归嵌套技术实现前所未有的任务执行能力。",
       textThree: "ReAct 实时推理引擎：边思考、边行动、边调整，动态响应任务变化。",

@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 title: 基础配置与自定义 AI 配置
+description: Memfit AI 快速开始：权限控制与基础参数配置、自定义 AI 模型接入，安装后建议先完成的两类设置。
+keywords: [Memfit AI 配置, 权限控制, 自定义模型, 快速开始]
 ---
 
 # 基础配置与自定义 AI 配置

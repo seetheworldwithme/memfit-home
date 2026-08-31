@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 title: Data Flow & Human Interaction
+description: The end-to-end data flow of Memfit AI — from user input, memory retrieval, and tool execution to results and feedback — and the design of its human interaction and intervention mechanisms.
+keywords: [data flow, human interaction, OODA loop, agent execution, Memfit AI]
 ---
 
 # Data Flow and Interaction

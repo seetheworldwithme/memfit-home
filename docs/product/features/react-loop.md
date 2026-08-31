@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 title: ReAct 循环
+description: Memfit AI 的 ReAct 循环引擎：推理（Reason）与行动（Act）交替执行，实时响应环境反馈完成安全任务。
+keywords: [ReAct 循环, 推理行动, Memfit AI, Agent 引擎]
 ---
 
 # ReAct 循环

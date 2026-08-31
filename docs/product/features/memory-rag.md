@@ -1,6 +1,8 @@
 ---
 sidebar_position: 4
 title: 记忆与 RAG
+description: Memfit AI 的记忆与 RAG 系统：持久化知识库、检索增强生成，让 AI Agent 记得住上下文、查得到证据。
+keywords: [记忆, RAG, 知识库, 检索增强, Memfit AI]
 ---
 
 # 记忆层与 RAG 系统

@@ -1,7 +1,11 @@
 ---
 sidebar_position: 1
 title: 概览
+description: Memfit AI 是 Yaklang 生态的开源网络安全 AI Agent 编排框架，采用递归式双引擎（ReAct+Plan）架构，面向安全自动化与代码审计场景。
+keywords: [Memfit AI, AI Agent, 网络安全, 安全自动化, Yaklang, ReAct, 递归式双引擎]
 ---
+
+import Head from '@docusaurus/Head';
 
 # Memfit AI 概览
 
@@ -28,6 +32,14 @@ Memfit AI 通过 **递归耦合** 这两种范式解决了这个问题。它制�
 ## 核心架构：五大支柱
 
 Memfit AI 围绕五个关键组件构建，它们协同工作以提供智能安全能力。
+
+| 支柱 | 所在层级 | 要解决的问题 | 核心机制 |
+|---|---|---|---|
+| **Plan 引擎** | 战略层 | 复杂安全任务无法一步完成，需要路线图 | 任务树生成、依赖管理、递归触发 |
+| **ReAct 引擎** | 战术层 | 现实环境非确定性，静态脚本无法适应 | LoopEngine（OODA 循环）、自旋检测、自我反思 |
+| **工具与 Forges** | 能力层 | AI 模型无法直接接触网络与文件系统 | 原子工具、场景化 Forge、Yaklang 集成、MCP 支持 |
+| **知识（RAG 系统）** | 知识层 | LLM 缺乏私有与最新领域知识 | 混合索引（向量+关键词）、代理化检索 |
+| **记忆** | 上下文层 | 标准会话无状态，Agent 重复犯错 | C.O.R.E. P.A.C.T. 评分、向量数据库持久化 |
 
 ![Memfit AI Architecture Pillars](/img/memfit-5-pillars.jpg)
 
@@ -94,3 +106,88 @@ RAG（检索增强生成）系统充当主动的“外脑”。它检索相关�
 **技术架构：**
 *   **C.O.R.E. P.A.C.T. 框架：** 一个评分系统，用于确定哪些记忆值得保留（关联度、相关性、可操作性等）。
 *   **向量数据库：** 持久化高价值记忆，以便跨会话长期调用。
+
+## 常见问题
+
+### Memfit AI 是什么？
+
+Memfit AI 是 Yaklang 生态的开源网络安全 AI Agent 编排框架，采用递归式双引擎（ReAct+Plan）架构，面向安全自动化与代码审计场景。
+
+### 递归式双引擎是如何工作的？
+
+Plan 引擎负责战略规划（生成任务树），ReAct 引擎负责战术执行（观察-思考-行动循环）；当子任务过于复杂时，ReAct 引擎会递归触发新的规划阶段，从而兼顾确定性与灵活性。
+
+### Memfit AI 是免费的开源软件吗？
+
+是。Memfit AI 构建于开源的 Yaklang 引擎之上，客户端可从 [官网下载页](/downloads) 免费获取。
+
+### Memfit AI 支持哪些操作系统？
+
+支持 macOS（Intel 与 Apple Silicon）、Windows 与 Linux，分别提供 `.dmg`、`.exe` 和 `.AppImage` 安装包。
+
+### Memfit AI 的核心架构是什么？
+
+采用五大支柱架构：Plan 引擎（战略层）、ReAct 引擎（战术层）、工具与 Forges（能力层）、知识 RAG（知识层）、记忆（上下文层），五者协同提供智能安全能力。
+
+### Memfit AI 与传统 AI 聊天机器人有什么区别？
+
+传统聊天机器人只能对话；Memfit AI 能理解任务、制定计划、调用工具并交付结果，并针对网络安全与代码审计等专业场景深度优化。
+
+<Head>
+  <script type="application/ld+json">{`
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Memfit AI 是什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Memfit AI 是 Yaklang 生态的开源网络安全 AI Agent 编排框架，采用递归式双引擎（ReAct+Plan）架构，面向安全自动化与代码审计场景。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "递归式双引擎是如何工作的？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Plan 引擎负责战略规划（生成任务树），ReAct 引擎负责战术执行（观察-思考-行动循环）；当子任务过于复杂时，ReAct 引擎会递归触发新的规划阶段，从而兼顾确定性与灵活性。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Memfit AI 是免费的开源软件吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "是。Memfit AI 构建于开源的 Yaklang 引擎之上，客户端可从官网下载页免费获取。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Memfit AI 支持哪些操作系统？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "支持 macOS（Intel 与 Apple Silicon）、Windows 与 Linux，分别提供 .dmg、.exe 和 .AppImage 安装包。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Memfit AI 的核心架构是什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "采用五大支柱架构：Plan 引擎（战略层）、ReAct 引擎（战术层）、工具与 Forges（能力层）、知识 RAG（知识层）、记忆（上下文层），五者协同提供智能安全能力。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Memfit AI 与传统 AI 聊天机器人有什么区别？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "传统聊天机器人只能对话；Memfit AI 能理解任务、制定计划、调用工具并交付结果，并针对网络安全与代码审计等专业场景深度优化。"
+      }
+    }
+  ]
+}
+`}</script>
+</Head>

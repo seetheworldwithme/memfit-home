@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
 title: Agentic 可靠性保障
+description: Memfit AI 的可靠性保障机制：自旋检测、记忆增强、反思决策等，确保 Agent 在长流程安全任务中稳定可控。
+keywords: [Agentic 可靠性, 自旋检测, 记忆增强, 反思决策, Memfit AI]
 ---
 
 # 可靠性保障机制

@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: 核心架构：递归式双引擎架构
+description: 详解 Memfit AI 的递归式双引擎架构：ReAct 引擎实时推理与行动，Plan 引擎任务分解与规划，二者递归协作完成复杂安全任务。
+keywords: [递归式双引擎, ReAct 引擎, Plan 引擎, Agent 架构, Memfit AI]
 ---
 
 # 递归式双引擎架构
@@ -28,7 +30,7 @@ title: 核心架构：递归式双引擎架构
 
 该设计受以下基础研究启发：
 
-- **ReAct: 语言模型中推理与行动的协同** (Yao et al., 2022) — 为战术层提供理论基础，证明交错推理和行动优于纯推理或纯行动方法。
+- **[ReAct: 语言模型中推理与行动的协同](https://arxiv.org/abs/2210.03629)** (Yao et al., 2022) — 为战术层提供理论基础，证明交错推理和行动优于纯推理或纯行动方法。
 - **Plan-and-Solve 提示工程** (Wang et al., 2023) — 确立了复杂任务执行前显式规划的重要性，形成战略层的基础。
 - **层次任务网络 (HTN) 规划** (Erol et al., 1994) — 为复杂任务递归分解为原始操作提供形式化框架。
 - **双过程理论** (Kahneman, 2011) — 解释为何分离快/慢思维能提高决策质量的认知科学基础。
@@ -1655,9 +1657,9 @@ reactiveData := fmt.Sprintf(`
 ## 参考资料
 
 ### 学术文献
-- Yao, S. et al. (2022). *ReAct: Synergizing Reasoning and Acting in Language Models*. ICLR 2023.
-- Wang, L. et al. (2023). *Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning*. ACL 2023.
-- Erol, K. et al. (1994). *HTN Planning: Complexity and Expressivity*. AAAI 1994.
+- Yao, S. et al. (2022). [*ReAct: Synergizing Reasoning and Acting in Language Models*](https://arxiv.org/abs/2210.03629). ICLR 2023.
+- Wang, L. et al. (2023). [*Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning*](https://arxiv.org/abs/2305.04091). ACL 2023.
+- Erol, K. et al. (1994). [*HTN Planning: Complexity and Expressivity*](https://arxiv.org/abs/cs/9401108). AAAI 1994.
 - Kahneman, D. (2011). *Thinking, Fast and Slow*. Farrar, Straus and Giroux.
 - Boyd, J. (1987). *A Discourse on Winning and Losing*. (OODA Loop 概念化)
 
