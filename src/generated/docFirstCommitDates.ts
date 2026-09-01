@@ -33,6 +33,7 @@ export const DOC_FIRST_COMMIT_DATES: Record<string, string> = {
   "/docs/product/features/memory-rag": "2025-12-15T04:32:31.000Z",
   "/docs/product/features/react-loop": "2025-12-15T04:32:31.000Z",
   "/docs/product/features/tools-forges": "2025-12-15T04:32:31.000Z",
+  "/docs/product/overview": "2025-12-15T04:32:31.000Z",
   "/docs/product/use-cases/automation": "2025-12-15T04:32:31.000Z",
   "/docs/product/use-cases/code-review": "2025-12-15T04:32:31.000Z",
   "/docs/product/use-cases/security-audit": "2025-12-15T04:32:31.000Z",
@@ -68,6 +69,7 @@ export const DOC_FIRST_COMMIT_DATES: Record<string, string> = {
   "/en/docs/product/features/memory-rag": "2025-12-15T04:32:31.000Z",
   "/en/docs/product/features/react-loop": "2025-12-15T04:32:31.000Z",
   "/en/docs/product/features/tools-forges": "2025-12-15T04:32:31.000Z",
+  "/en/docs/product/overview": "2025-12-15T04:32:31.000Z",
   "/en/docs/product/use-cases/automation": "2025-12-15T04:32:31.000Z",
   "/en/docs/product/use-cases/code-review": "2025-12-15T04:32:31.000Z",
   "/en/docs/product/use-cases/security-audit": "2025-12-15T04:32:31.000Z"
