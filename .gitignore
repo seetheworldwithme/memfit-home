@@ -81,3 +81,6 @@ common/xlic/*.gzip
 CLAUDE.local.md
 GEO-AUDIT-REPORT-*.md
 0901-*.md
+
+# 构建产物：首次提交时间映射（由 scripts/gen-first-commit-dates.mjs 在 build 前生成）
+src/generated/
